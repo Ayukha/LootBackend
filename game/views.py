@@ -5,8 +5,9 @@ from django.shortcuts import render
 
 from django.contrib.auth import login, authenticate
 from django.shortcuts import render, redirect
+from django.http import HttpResponse
 
-from game.forms import SignUpForm
+# from game.forms import SignUpForm
 
 # Create your views here.
 
@@ -59,10 +60,15 @@ def description(request):
 	if request.user.is_authenticated():
 		return render_to_response("description.html")
 	else:
-	return HttpResponseRedirect()
+		return HttpResponseRedirect()
 
 
 def mystery(request):
+	if request.method == "GET":
+		return render(request,'game/mystery.html')
+	if request.method == "POST":
+		print("in else")
+		return HttpResponse('dfbdxfb')
 	if request.user.is_authenticated():
 		user = Profile.objects.get(Zealid = request.user.username)
 
