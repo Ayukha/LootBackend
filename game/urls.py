@@ -5,5 +5,5 @@ from . import views
 
 
 urlpatterns = [
-    url(r'^',views.mystery,name='game_mystery' ),
-    ]
+    url(r'^(?P<id>\d+)/$',views.mystery,name='game_mystery' ),
+     ]

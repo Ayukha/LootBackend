@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from allauth.account.views import login, logout
+from allauth.account.views import login, logout , signup
 from django.conf.urls import include
 from game import views
 
@@ -24,6 +24,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', login, name="account_login"),
     url(r'^login/$', login, name="account_login"),
+    url(r'^signup/$',signup, name="account_signup"),
 	url(r'^logout/$', logout, name="account_logout"),
     url(r'^accounts/', include('allauth.urls')),
     url(r'^mystery/', include('game.urls')),

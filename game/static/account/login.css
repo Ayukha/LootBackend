@@ -1,0 +1,32 @@
+body {
+	background: #ecf0f1;
+	font-family: sans-serif;
+	color: #222;
+}
+
+button{
+	background-color: #f1c40f;
+	border: none;
+	padding: 0.5rem 1rem;
+	margin-bottom: 16px;
+
+
+}
+
+.login{
+	padding: 7px;
+	border-radius: 8px;
+	width: 400px;
+	/*margin-top: \*/
+	margin: 240px auto;
+	text-align: center;
+	/*margin: 16px auto;*/
+	font-size: 16px;
+	background-color: #3498db;
+}
+
+.login-header {
+	margin-top: o;
+	margin-bottom: 0;
+
+}

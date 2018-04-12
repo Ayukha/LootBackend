@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
+    'game',
 ]
 
 MIDDLEWARE = [
@@ -138,7 +139,7 @@ STATIC_URL = '/static/'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-LOGIN_REDIRECT_URL = '/mystery'
+LOGIN_REDIRECT_URL = '/mystery/1'
 
 
 SOCIALACCOUNT_PROVIDERS = {
@@ -155,4 +156,4 @@ SOCIALACCOUNT_PROVIDERS = {
 
 SOCIALACCOUNT_QUERY_EMAIL= True
 ACCOUNT_LOGOUT_REDIRECT_URL = '/login'
-ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False
+ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = True
